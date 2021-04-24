@@ -42,15 +42,12 @@ spec:
               - github.com
 
   steps:
-    - id: fetch-base
-      name: Custom Fetch Base
-      action: fetch:cookiecutter
+    - id: write-to-file
+      name: Custom Write to File Test
+      action: custom
       input:
-        url: ./template
-        values:
-          name: '{{ parameters.name }}'
-          owner: '{{ parameters.owner }}'
-          destination: '{{ parseRepoUrl parameters.repoUrl }}'
+        contents: 'asd'
+        filename: 'somefile'
 
     #- id: fetch-docs
       #name: Fetch Docs
