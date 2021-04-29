@@ -21,14 +21,6 @@ spec:
           ui:autofocus: true
           ui:options:
             rows: 5
-        owner:
-          title: Owner
-          type: string
-          description: Owner of the component
-          ui:field: OwnerPicker
-          ui:options:
-            allowedKinds: 
-              - Group
     - title: Choose a location
       required:
         - repoUrl
@@ -44,7 +36,7 @@ spec:
   steps:
     - id: write-to-file
       name: Custom Write to File Test
-      action: custom
+      action: actions:custom
       input:
         contents: 'asd'
         filename: 'somefile'
