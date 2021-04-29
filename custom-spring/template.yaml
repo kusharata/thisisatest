@@ -20,22 +20,10 @@ spec:
           ui:autofocus: true
           ui:options:
             rows: 5
-    - title: Choose a location
-      required:
-        - repoUrl
-      properties:
-        repoUrl:
-          title: Repository Location
-          type: string
-          ui:field: RepoUrlPicker
-          ui:options:
-            allowedHosts:
-              - github.com
-
   steps:
     - id: write-to-file
       name: Custom Write to File Test
-      action: actions:custom
+      action: custom
       input:
         contents: 'asd'
         filename: 'somefile'
